@@ -22,7 +22,7 @@ body {
 #header .name img {
   float: left;
   size: 1em;
-  margin: .4em .8em;
+  margin: 0em .8em;
 }
 #header .name a {
   color: #444444;

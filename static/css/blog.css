@@ -36,7 +36,7 @@
   -moz-transition: .2s ease;
   -o-transition: .2s ease;
   transition: .2s ease;
-  background-color: #005367;
+  background-color: #010c14;
 }
 #content-blog .blog-post .post-title {
   font-family: "Helvetica Neue", Sans-Serif;
@@ -58,7 +58,7 @@
   font-size: .6em;
 }
 #content-blog .blog-post .post-title:hover {
-  color: #00b9e6;
+  color: #08528d;
 }
 #content-blog .blog-post .post-title:hover .front {
   border: 1.5em solid rgba(103, 225, 255, 0.5);

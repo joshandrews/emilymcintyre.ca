@@ -1,4 +1,4 @@
-$def with (head, offleft, name, username, email)
+$def with (head, offleft, name, username, email, image_url)
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,6 +32,9 @@ $def with (head, offleft, name, username, email)
                             </p>
                             <p class="with-label">
                                 <label>Email</label><input type="text" name="email" value="$email" placeholder="Email" autocomplete="off">
+                            </p>
+							<p class="with-label">
+                                <label>Photo</label><input type="text" name="hpImageURL" value="$image_url" placeholder="Home Page Image URL" autocomplete="off">
                             </p>
                             <div class="sub-container">
                                 <input type="submit" value="Update" class="submit">

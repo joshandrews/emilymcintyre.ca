@@ -22,11 +22,11 @@
   font-size: 1.2em;
 }
 #content p a {
-  color: #01cdff;
+  color: #0960a5;
   font-weight: 400;
 }
 #content p a:hover {
-  color: #67e1ff;
+  color: #2196f3;
 }
 @media only screen and (min-width: 320px) and (max-width: 639px) {
   #content {

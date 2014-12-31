@@ -9,12 +9,11 @@
 }
 #content-work h3 {
   font-size: 3em;
-  color: #7eb12c;
+  color: #2196f3;
   font-family: "Helvetica Neue", "Arial", Sans-Serif;
   font-weight: 100;
 }
 #content-work ul {
-  border-left: 1px solid #893027;
   list-style-type: none;
 }
 #content-work ul li {
@@ -30,14 +29,14 @@
 }
 #content-work ul li a:hover {
   color: #444444;
-  border-bottom: 1px solid #3ac4df;
+  border-bottom: 1px solid #2196f3;
 }
 #content-work ul li div a {
-  color: #3ac4df;
+  color: #2196f3;
   font-weight: 400;
 }
 #content-work ul li div a:hover {
-  color: #92deed;
+  color: #82c4f8;
 }
 @media only screen and (min-width: 320px) and (max-width: 639px) {
   #content-work {

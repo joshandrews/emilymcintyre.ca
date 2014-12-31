@@ -17,7 +17,7 @@ def generateHeader(name):
                 <a href="/blog" class="button">Blog</a>
             </li>
             <li class="button">
-                <a href="/work" class="button">Work</a>
+                <a href="/work" class="button">What I do</a>
             </li>
         </ul>
     </div>"""
@@ -43,7 +43,7 @@ def generateHeader(name):
                 <a href="/blog" class="button">Blog</a>
             </li>
             <li class="button">
-                <a href="/work" class="button">Work</a>
+                <a href="/work" class="button">What I Do</a>
             </li>
         </ul>
     </div>"""

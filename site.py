@@ -195,7 +195,8 @@ class Settings:
             ident = blog.get_user()[0]
             con = config.Config()
             render = user.create_render(session)
-            return render.settings(gen_head(), gen_offleft(), con.ConfigSectionMap("Info")["name"], ident['user'], ident['email'])
+            return render.settings(gen_head(), gen_offleft(), con.ConfigSectionMap("Info")["name"], ident['user'],
+                                   ident['email'], con.ConfigSectionMap("Preferences")["indexbackgroundurl"])
         else:
             raise web.seeother('/login')
 
@@ -207,9 +208,11 @@ class Settings:
             new_username = web.input().username
             new_password = web.input().password
             new_email = web.input().email
+            new_url = web.input().hpImageURL
             ident = blog.get_user()[0]
             old_password = ident['passwd']
             old_name = con.ConfigSectionMap("Info")["name"]
+            old_url = con.ConfigSectionMap("Preferences")["indexbackgroundurl"]
             hash_password = hashlib.sha1(ident['salt']+new_password).hexdigest()
             if hash_password is not ident['passwd'] and str(new_password) is not "" and new_password is not None:
                 old_password = hash_password
@@ -219,6 +222,9 @@ class Settings:
             if new_name is not old_name:
                 con.setName(new_name)
                 espresso.generateHeader(new_name)
+            if new_url is not old_url:
+                con.setIndexBackgroundUrl(new_url)
+
             raise web.seeother('/americano')
         else:
             raise web.seeother('/settings-auth')
@@ -280,11 +286,11 @@ class Logout:
 
 
 class Index:
-    
     def GET(self):
+        con = config.Config()
         check_installed()
         render = web.template.render('templates/common', globals=t_globals)
-        return render.index(gen_head(), gen_offleft())
+        return render.index(gen_head(), gen_offleft(), con.ConfigSectionMap("Preferences")["indexbackgroundurl"])
 
 
 class Blog:

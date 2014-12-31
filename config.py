@@ -14,6 +14,7 @@ class Config:
             self.config.add_section("Info")
             self.config.set("Preferences", "ExtraHeaderEnabled", "False")
             self.config.set("Preferences", "Colors", "Default")
+            self.config.set('Preferences', 'indexbackgroundurl', "http://photos-c.ak.instagram.com/hphotos-ak-xpa1/t51.2885-15/10369418_255518024631354_1092534291_n.jpg")
             self.config.set("Info", "Installed", "1")
             self.config.write(cfgfile)
             cfgfile.close()
@@ -47,6 +48,12 @@ class Config:
     def setInstalled(self, val):
         cfgfile = open("americano.ini",'w')
         self.config.set('Info','installed',val)
+        self.config.write(cfgfile)
+        cfgfile.close()
+
+    def setIndexBackgroundUrl(self, val):
+        cfgfile = open("americano.ini",'w')
+        self.config.set('Preferences','indexbackgroundurl',val)
         self.config.write(cfgfile)
         cfgfile.close()
 

@@ -5,19 +5,41 @@
   background-color: #CCCCCC;
 }
 #content {
-    height: auto;
-	background-color: #333333;
+    height: 80%;
+    width: 100%;
 	margin: 0 auto;
 	text-align: center;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 0px 0px 0px;
+    position: absolute;
+    .background-image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .image-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            opacity: 0.90;
+        }
+    }
     .welcome {
         .ffstandard();
         padding-top: 2.5em;
         padding-bottom: 2.5em;
         line-height: 1.8em;
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        top: 20%;
         h4 {
             font-size: 2em;
-            color: @blue;
+            color: @purple;
             margin: 0px;
             padding-top: .5em;
             padding-bottom: .5em;
@@ -39,10 +61,10 @@
         a {
 	        svg:hover {
 				path {
-					fill: @blue;
+					fill: @purple;
 				}
 			}
-            color: @blue;
+            color: @purple;
             font-weight: 400;
 	        text-decoration: none;
         }
