@@ -2,7 +2,7 @@
   background-color: #CCCCCC;
 }
 #content {
-  height: 80%;
+  height: 35em;
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -69,7 +69,10 @@
 }
 @media only screen and (min-width: 320px) and (max-width: 639px) {
   #content {
-    padding-bottom: 10px;
+    height: 30em;
+  }
+  #content .welcome {
+    top: 5%;
   }
   #content .welcome div {
     width: 90%;
@@ -77,12 +80,11 @@
 }
 @media only screen and (min-width: 640px) and (max-width: 1024px) {
   #content {
-    padding-bottom: 10px;
+    height: 30em;
   }
   #content .welcome {
+    top: 5%;
     line-height: 2.2em;
-    padding-top: 25px;
-    padding-bottom: 15px;
   }
   #content .welcome div {
     width: 70%;
@@ -98,5 +100,10 @@
   
 }
 @media screen and (min-width: 1920px) {
-  
+  #content {
+    height: 50em;
+  }
+  #content .welcome {
+    top: 30%;
+  }
 }
