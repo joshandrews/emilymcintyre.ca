@@ -36,7 +36,7 @@
         position: absolute;
         z-index: 100;
         width: 100%;
-        top: 20%;
+        top: 12%;
         h4 {
             font-size: 2em;
             color: @purple;
@@ -77,10 +77,18 @@
 
 @media only screen and (min-width:320px) and (max-width:639px) {
     #content {
-        height: 30em;
+        background-color: #333;
+        position: relative;
+        .background-image {
+            background-size: auto;
+            position: relative;
+        }
         .welcome {
-            top: 5%;
+            top: 0;
+            position: relative;
+            padding-bottom: 15em;
             div {
+                font-size: 1.1em;
                 width: 90%;
             }
         }
@@ -88,7 +96,7 @@
 }
 @media only screen and (min-width : 640px) and (max-width : 1024px) {
     #content {
-        height: 30em;
+        height: 40em;
         .welcome {
             top: 5%;
             line-height: 2.2em;
